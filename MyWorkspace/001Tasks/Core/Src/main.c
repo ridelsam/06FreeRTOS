@@ -44,7 +44,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+#define DWT_CTRL (*(volatile uint32_t*) 0xE0001000)
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -89,11 +89,20 @@ int main(void)
 
   /* USER CODE BEGIN SysInit */
 
+
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
+
+
+  //Enable the CYCCNT counter
+  DWT_CTRL |= ( 1<<0 );
+
+  SEGGER_SYSVIEW_Conf();
+
+  SEGGER_SYSVIEW_Start();
 
   status = xTaskCreate(task1_handler, "Task-1", 200, "Hello World from Task-1", 2, &task1_handle);
 
@@ -310,9 +319,14 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 static void task1_handler(void* parameters)
 {
+
+	char msg[100];
 	while(1)
 	{
-		printf("%s\n", (char*)parameters);
+		//printf("%s\n", (char*)parameters);
+
+		snprintf(msg,100,"%s\n", (char*)parameters);
+		SEGGER_SYSVIEW_PrintfTarget(msg);
 		taskYIELD();
 	}
 
@@ -322,7 +336,10 @@ static void task2_handler(void* parameters)
 {
 	while(1)
 	{
-		printf("%s\n", (char*)parameters);
+		char msg[100];
+		//printf("%s\n", (char*)parameters);
+		snprintf(msg,100,"%s\n", (char*)parameters);
+		SEGGER_SYSVIEW_PrintfTarget(msg);
 		taskYIELD();
 	}
 
