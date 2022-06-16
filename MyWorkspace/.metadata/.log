@@ -1011,3 +1011,51 @@ org.eclipse.core.runtime.AssertionFailedException: assertion failed: The applica
 
 !ENTRY org.eclipse.core.jobs 2 2 2022-05-20 20:41:24.590
 !MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.debug.core.DebugPlugin$EventDispatchJob
+!SESSION 2022-06-13 19:55:08.851 -----------------------------------------------
+eclipse.buildId=Version 1.9.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\ridel\Documents\CareerDevelopment\Embedded\06FreeRTOS\MyWorkspace
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-06-13 19:55:13.358
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-06-13 19:55:13.436
+!MESSAGE Log4j initialized with config file C:\Users\ridel\Documents\CareerDevelopment\Embedded\06FreeRTOS\MyWorkspace\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-06-13 19:55:23.140
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2022-06-14 18:18:26.276 -----------------------------------------------
+eclipse.buildId=Version 1.9.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-06-14 18:18:41.017
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-06-14 18:18:41.100
+!MESSAGE Log4j initialized with config file C:\Users\ridel\Documents\CareerDevelopment\Embedded\06FreeRTOS\MyWorkspace\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-06-14 18:18:47.761
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2022-06-15 20:35:23.615 -----------------------------------------------
+eclipse.buildId=Version 1.9.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-06-15 20:35:40.988
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-06-15 20:35:41.059
+!MESSAGE Log4j initialized with config file C:\Users\ridel\Documents\CareerDevelopment\Embedded\06FreeRTOS\MyWorkspace\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-06-15 20:35:48.586
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-06-15 21:10:30.200
+!MESSAGE Indexed '002LED_Tasks' (36 sources, 100 headers) in 4.63 sec: 7,776 declarations; 48,954 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0035%)

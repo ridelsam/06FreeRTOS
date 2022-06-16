@@ -20,7 +20,6 @@
 #include "main.h"
 
 /* Private includes ----------------------------------------------------------*/
-#include <stdio.h>
 /* USER CODE BEGIN Includes */
 #include "FreeRTOS.h"
 #include "task.h"
@@ -100,9 +99,11 @@ int main(void)
   //Enable the CYCCNT counter
   DWT_CTRL |= ( 1<<0 );
 
+  SEGGER_UART_init(500000);
+
   SEGGER_SYSVIEW_Conf();
 
-  SEGGER_SYSVIEW_Start();
+//  SEGGER_SYSVIEW_Start();
 
   status = xTaskCreate(task1_handler, "Task-1", 200, "Hello World from Task-1", 2, &task1_handle);
 
@@ -119,7 +120,6 @@ int main(void)
 
 
   /* USER CODE END 2 */
-
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
@@ -155,8 +155,8 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
   RCC_OscInitStruct.PLL.PLLM = 8;
-  RCC_OscInitStruct.PLL.PLLN = 50;
-  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV4;
+  RCC_OscInitStruct.PLL.PLLN = 168;
+  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
   RCC_OscInitStruct.PLL.PLLQ = 7;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
@@ -172,7 +172,7 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_5) != HAL_OK)
   {
     Error_Handler();
   }
