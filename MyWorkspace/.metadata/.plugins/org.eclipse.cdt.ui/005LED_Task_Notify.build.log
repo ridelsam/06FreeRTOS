@@ -1,0 +1,12 @@
+20:00:07 **** Build of configuration Debug for project 005LED_Task_Notify ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/ridel/Documents/CareerDevelopment/Embedded/06FreeRTOS/MyWorkspace/common/ThirdParty/FreeRTOS/include" -I"C:/Users/ridel/Documents/CareerDevelopment/Embedded/06FreeRTOS/MyWorkspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F" -I"C:/Users/ridel/Documents/CareerDevelopment/Embedded/06FreeRTOS/MyWorkspace/common/ThirdParty/SEGGER/Config" -I"C:/Users/ridel/Documents/CareerDevelopment/Embedded/06FreeRTOS/MyWorkspace/common/ThirdParty/SEGGER/OS" -I"C:/Users/ridel/Documents/CareerDevelopment/Embedded/06FreeRTOS/MyWorkspace/common/ThirdParty/SEGGER/SEGGER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:442:36: error: unknown type name 'TIM_HandleTypeDef'; did you mean 'DMA_HandleTypeDef'?
+  442 | void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+      |                                    ^~~~~~~~~~~~~~~~~
+      |                                    DMA_HandleTypeDef
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+20:00:08 Build Failed. 2 errors, 0 warnings. (took 357ms)
+
