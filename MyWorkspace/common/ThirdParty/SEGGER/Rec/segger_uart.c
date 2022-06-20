@@ -1,11 +1,3 @@
-/*
- * segger_uart.c
- *
- *  Created on: Jun 15, 2022
- *      Author: ridel
- */
-
-
 /**********************************************************
 *          SEGGER MICROCONTROLLER SYSTEME GmbH
 *   Solutions for real time microcontroller applications

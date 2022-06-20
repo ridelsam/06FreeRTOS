@@ -1,0 +1,16 @@
+17:47:08 **** Incremental Build of configuration Debug for project 008Queues_n_timers ****
+make -j8 all 
+arm-none-eabi-gcc -o "008Queues_n_timers.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ridel\Documents\CareerDevelopment\Embedded\06FreeRTOS\MyWorkspace\008Queues_n_timers\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="008Queues_n_timers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 008Queues_n_timers.elf
+ 
+arm-none-eabi-size   008Queues_n_timers.elf 
+arm-none-eabi-objdump -h -S  008Queues_n_timers.elf  > "008Queues_n_timers.list"
+   text	   data	    bss	    dec	    hex	filename
+  37580	    148	 104732	 142460	  22c7c	008Queues_n_timers.elf
+Finished building: default.size.stdout
+ 
+Finished building: 008Queues_n_timers.list
+ 
+
+17:47:08 Build Finished. 0 errors, 0 warnings. (took 687ms)
+
